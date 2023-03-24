@@ -1,0 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700;900&display=swap');
+
+@import 'base/variables';
+
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 0 25px;
+    margin: 0 auto;
+    max-width: 72rem;
+}
+.benefit, .catalog, .shares, .footer {
+    border-top: 90px solid transparent;
+    margin-top: -90px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+/* @media (max-width: 767px) {
+    border-top: 70px solid transparent;
+    margin-top: -70px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+ */
+
+.btn {
+    margin-top: 8vh;
+    display: inline-block;
+    padding: 0.5rem;
+    min-width: 0.7rem;
+    background-color: $main-color;
+    font-weight: 700;
+    color: rgb(5, 0, 0);
+    border-radius: 0.5rem;
+    border: 3px solid #8d2626d1;
+    text-decoration: none;
+    &:hover {
+        background-color: #8d2626d1;
+        color: white;
+        border-color: #21243D;
+    }
+    &_mod {
+        margin-top: 0.5rem;
+    }
+
+    &__shares {
+        margin-top: 3vh;
+    }
+}
+
+.title {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.6;
+    &_white {
+        color: white;
+    }
+    &_card {
+        font-size: 2rem
+    }
+}
+
+
+
+@import 'blocks/header';
+@import 'blocks/promo';
+@import 'blocks/benefit';
+@import 'blocks/catalog';
+@import 'blocks/company';
+@import 'blocks/shares';
+@import 'blocks/footer';
+@import 'blocks/price';
+@import 'blocks/media';
+

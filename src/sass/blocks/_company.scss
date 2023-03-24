@@ -1,0 +1,14 @@
+.company {
+    padding: 15vh 0 5vh 0;
+    min-height: 100vh;
+    background:linear-gradient(0deg, rgba(150, 166, 197, 0.8) 0%, rgba(0, 0, 0, 0.6) 26%, rgba(0, 0, 0, 0.6) 51%, rgba(0, 0, 0, 0.6) 76%, rgba(137, 137, 203, 0.15) 100%), url('../img/bg/bg3.jpg') center (center / cover) no-repeat;
+
+    &__dscr {
+        margin-top: 8vh;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 1.6;
+        color: white;
+    }
+/*     background: linear-gradient(90deg, rgba(54,50,106,0.3) 0%, rgba(1,0,0,0.3) 50%, rgba(54,50,106,0.3) 100%), url('../img/bg/bg3.png') center (center / cover) no-repeat; */
+}

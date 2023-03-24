@@ -1,0 +1,13 @@
+.promo {
+    height: 100vh;
+    padding-top: 36vh;
+    background: linear-gradient(90deg, rgba(54,50,106,0.3) 0%, rgba(1,0,0,0.3) 50%, rgba(54,50,106,0.3) 100%), url('../img/bg/bg1.jpg') center (center / cover) no-repeat;
+    &__title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        color: white;
+        text-shadow: 10px 5px 25px rgb(0, 0, 0);
+    }
+
+}

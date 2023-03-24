@@ -1,0 +1,104 @@
+.price {
+    min-height: 100vh;
+    padding: 8rem 0 2rem 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__img {
+        display: flex;
+        align-items: center;
+        height: auto;
+        width: 25%;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+        
+    }
+    &__name {
+        margin-left: 4rem;
+        width: 25%;
+        &-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        &-subtitle {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+    }
+    &__options {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+        height: 12rem;
+        &-item {
+            height: 50%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            &-icon {
+                width: 6rem;
+                height: 6rem;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        &-wrapper {
+            margin-left: 1rem;
+        }
+        &-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        &-dscr {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+
+        
+    &__table {
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.25rem;
+        }
+
+        th, td {
+            padding: 0.625rem;
+            text-align: left;
+            border: 1px solid #21243D;
+        }
+
+        th {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            background-color: #21243D;
+        }
+        tr {
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+        tr:nth-child(even) {
+            background-color: lightgray;
+        }
+    }
+    &__details {
+        summary {
+            font-size: 1.5rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+
+         
+    
+}
