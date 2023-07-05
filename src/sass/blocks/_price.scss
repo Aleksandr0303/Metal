@@ -2,6 +2,12 @@
     min-height: 100vh;
     padding: 8rem 0 2rem 0;
 
+    &__card {
+        display: block;
+        padding-top: 8rem;
+        margin-top: -8rem;
+    }
+
     &__wrapper {
         display: flex;
         justify-content: center;
@@ -73,25 +79,30 @@
 
         th, td {
             padding: 0.625rem;
-            text-align: left;
-            border: 1px solid #21243D;
+            text-align: center;
+            border: 1px solid #21243d;
         }
+
 
         th {
             font-size: 1.5rem;
             font-weight: 700;
             color: white;
-            background-color: #21243D;
+            background-color: #21243d;
         }
         tr {
             font-size: 1.3rem;
             font-weight: 400;
         }
         tr:nth-child(even) {
-            background-color: lightgray;
+            background-color: #E7E7EA;
         }
     }
+    .price__table tr td:first-child {
+        text-align: left;
+    }
     &__details {
+        font-size: 1.3rem;
         summary {
             font-size: 1.5rem;
             font-weight: 700;

@@ -1,3 +1,5 @@
+@import 'libs/slick-theme';
+@import 'libs/slick';
 
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700;900&display=swap');
 
@@ -22,19 +24,11 @@
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
 }
-/* @media (max-width: 767px) {
-    border-top: 70px solid transparent;
-    margin-top: -70px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-}
- */
 
 .btn {
     margin-top: 8vh;
     display: inline-block;
-    padding: 0.5rem;
+    padding: 0.4rem;
     min-width: 0.7rem;
     background-color: $main-color;
     font-weight: 700;
@@ -48,6 +42,8 @@
         border-color: #21243D;
     }
     &_mod {
+        line-height: 0.9;
+        text-align: center;
         margin-top: 0.5rem;
     }
 
@@ -67,7 +63,12 @@
         color: white;
     }
     &_card {
-        font-size: 2rem
+        font-size: 2rem;
+    }
+    &_map {
+        margin-top:11px;
+        color: white;
+        font-size: 1.9rem;
     }
 }
 
@@ -82,4 +83,5 @@
 @import 'blocks/footer';
 @import 'blocks/price';
 @import 'blocks/media';
+@import 'blocks/slider';
 

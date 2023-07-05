@@ -1,0 +1,65 @@
+.slider {
+    padding: 1rem 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.8) 48%, rgba(255,255,255,0.7) 100%), url('../img/bg/bg2.jpg') center (center / cover) no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: screen;
+    
+
+    .container {
+        padding: 0 50px;
+        position: relative;
+    }
+
+    &__prev {
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #8d2626d1;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 1;
+    }
+    &__next {
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #8d2626d1;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 1;
+    }
+
+/*     .container {
+        overflow: hidden;
+    }
+     */
+
+    &__wrapper {
+        display: flex;
+        overflow: hidden;
+    }
+    &__name {
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__img {
+        min-width: 10rem;
+        height: 7.5rem;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+}
