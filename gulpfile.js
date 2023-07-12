@@ -7,6 +7,11 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
+const gcmq = require('gulp-group-css-media-queries');
+const sourcemaps = require('gulp-sourcemaps');
+const webp = require('gulp-webp');
+const webpHTML = require('gulp-webp-html');
+const webpcss = require('gulp-webpcss');
 
 gulp.task('server', function() {
 
@@ -19,15 +24,30 @@ gulp.task('server', function() {
     gulp.watch("src/*.html").on('change', browserSync.reload);
 });
 
+
 gulp.task('styles', function() {
     return gulp.src("src/sass/**/*.+(scss|sass)")
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(rename({suffix: '.min', prefix: ''}))
         .pipe(autoprefixer())
+        .pipe(webpcss())
+        .pipe(gcmq())
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest("dist/css"))
         .pipe(browserSync.stream());
 });
+
+gulp.task('sourcemaps', function() {
+    return gulp.src("src/sass/**/*.+(scss|sass)")
+        //.pipe(sourcemaps())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer())
+        .pipe(webpcss())
+        .pipe(gcmq())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest("src/css"))
+        .pipe(browserSync.stream());
+    });
 
 gulp.task('watch', function() {
     gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel('styles'));
@@ -40,6 +60,7 @@ gulp.task('watch', function() {
 
 gulp.task('html', function () {
     return gulp.src("src/*.html")
+        .pipe(webpHTML())
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest("dist/"));
 });
@@ -68,5 +89,12 @@ gulp.task('images', function () {
         .pipe(gulp.dest("dist/img"))
         .pipe(browserSync.stream());
 });
+gulp.task('webp', function () {
+    return gulp.src("src/img/**/*")
+        .pipe(webp())
+        .pipe(gulp.dest("dist/img"))
+        .pipe(browserSync.stream());
+});
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images'));
+
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'sourcemaps', 'scripts', 'fonts', 'icons', 'html', 'images', 'webp'));

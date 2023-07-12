@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	//tabs-link
 	
-  	function simulateTab (links, cards) {
+/*   	function simulateTab (links, cards) {
 		const catalogLinks = document.querySelectorAll(links);
 		const priceCards = document.querySelectorAll(cards);
 
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		showCard ();
 	}
 	simulateTab ('.btn_mod', '.price__card');
-	simulateTab ('.menu__metal > li > a', '.price__card');
+	simulateTab ('.menu__metal > li > a', '.price__card'); */
 
   $(document).ready(function(){
     $('.slider__wrapper').slick({
