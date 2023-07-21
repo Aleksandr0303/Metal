@@ -13,6 +13,7 @@ const webp = require('gulp-webp');
 const webpHTML = require('gulp-webp-html');
 const webpcss = require('gulp-webpcss');
 
+
 gulp.task('server', function() {
 
     browserSync({
@@ -30,8 +31,6 @@ gulp.task('styles', function() {
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(rename({suffix: '.min', prefix: ''}))
         .pipe(autoprefixer())
-        .pipe(webpcss())
-        .pipe(gcmq())
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest("dist/css"))
         .pipe(browserSync.stream());
