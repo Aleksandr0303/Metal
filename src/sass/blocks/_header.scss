@@ -20,7 +20,7 @@
     }
     &__btn {
         display: none;
-        button {
+        div {
             border: none;
             background-color: #21243D;
         }
@@ -44,7 +44,7 @@
         right: 20px;
         font-size: 70px;
         line-height: 0;
-        font-weight: 400;
+        font-weight: 600;
         color: $main-color;
     }
     .menu {

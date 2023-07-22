@@ -1,3 +1,7 @@
+section#catalog {
+    background-attachment: fixed;
+    background-blend-mode: screen;
+}
 .catalog {
     padding-bottom: 2rem;
     min-height: 100vh;
@@ -18,7 +22,9 @@
     }
     &__img {
         width: 14rem;
-        height: 12rem;
+        height: 14rem;
+        display: flex;
+        align-items: center;
         img {
             width: 100%;
             height: auto;

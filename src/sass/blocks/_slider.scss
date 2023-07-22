@@ -1,16 +1,20 @@
-.slider {
+.swiper {
     padding: 1rem 0;
     background: linear-gradient(90deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.8) 48%, rgba(255,255,255,0.7) 100%), url('../img/bg/bg2.jpg') center (center / cover) no-repeat;
     background-attachment: fixed;
     background-blend-mode: screen;
+    min-height: 40vh;
+    width: 800px;
+    height: 400px;
     
 
     .container {
         padding: 0 50px;
         position: relative;
+        overflow: hidden;
     }
 
-    &__prev {
+    &-button-prev {
         position: absolute;
         top: 50%;
         left: 5px;
@@ -23,7 +27,7 @@
         transition: all 0.3s ease;
         z-index: 1;
     }
-    &__next {
+    &-button-next {
         position: absolute;
         top: 50%;
         right: 5px;
@@ -36,25 +40,25 @@
         transition: all 0.3s ease;
         z-index: 1;
     }
-
-/*     .container {
-        overflow: hidden;
-    }
-     */
+    
 
     &__wrapper {
+        margin-top: 2rem;
         display: flex;
         overflow: hidden;
     }
-    &__name {
+    &-slide {
         padding: 0 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
     &__img {
-        min-width: 10rem;
-        height: 7.5rem;
+        min-width: 12rem;
+        min-height: 12rem;
+        display: flex;
+        align-items: center;
         img {
             width: 100%;
             height: auto;

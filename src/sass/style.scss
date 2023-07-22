@@ -1,9 +1,10 @@
-@import 'libs/slick-theme';
-@import 'libs/slick';
 
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700;900&display=swap');
-
 @import 'base/variables';
+//@import 'swiper/css';
+//@import 'swiper/css/navigation';
+//@import 'swiper/css/pagination';
+
 
 * {
     font-family: 'Source Sans Pro', sans-serif;
@@ -83,5 +84,5 @@
 @import 'blocks/footer';
 @import 'blocks/price';
 @import 'blocks/media';
-@import 'blocks/slider';
+//@import 'blocks/slider';
 
