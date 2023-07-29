@@ -1,13 +1,9 @@
-section#catalog {
-    background-attachment: fixed;
-    background-blend-mode: screen;
-}
+
 .catalog {
     padding-bottom: 2rem;
     min-height: 100vh;
-    background: linear-gradient(90deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.8) 48%, rgba(255,255,255,0.7) 100%), url('../img/bg/bg2.jpg') center (center / cover) no-repeat;
-    background-attachment: fixed;
-    background-blend-mode: screen;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.8) 48%, rgba(255, 255, 255, 0.7) 100%), url('../img/bg/bg2.jpg') center fixed no-repeat;
+
 
     &__wrapper {
         display: grid;

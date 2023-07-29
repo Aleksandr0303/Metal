@@ -570,6 +570,78 @@ section#catalog {
   cursor: pointer;
 }
 
+.swiper {
+  padding: 1rem 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.8) 48%, rgba(255, 255, 255, 0.7) 100%), url("../img/bg/bg2.jpg") center center/cover no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: screen;
+  min-height: 40vh;
+  width: 800px;
+  height: 400px;
+}
+
+.swiper .container {
+  padding: 0 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(141, 38, 38, 0.8196078431);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(141, 38, 38, 0.8196078431);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.swiper__wrapper {
+  margin-top: 2rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper__img {
+  min-width: 12rem;
+  min-height: 12rem;
+  display: flex;
+  align-items: center;
+}
+
+.swiper__img img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .webp .promo {
   background: linear-gradient(90deg, rgba(54, 50, 106, 0.3) 0%, rgba(1, 0, 0, 0.3) 50%, rgba(54, 50, 106, 0.3) 100%), url(../img/bg/bg1.webp) center center/cover no-repeat;
 }
@@ -580,6 +652,10 @@ section#catalog {
 
 .webp .company {
   background: linear-gradient(0deg, rgba(150, 166, 197, 0.8) 0%, rgba(0, 0, 0, 0.6) 26%, rgba(0, 0, 0, 0.6) 51%, rgba(0, 0, 0, 0.6) 76%, rgba(137, 137, 203, 0.15) 100%), url(../img/bg/bg3.webp) center center/cover no-repeat;
+}
+
+.webp .swiper {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.8) 48%, rgba(255, 255, 255, 0.7) 100%), url(../img/bg/bg2.webp) center center/cover no-repeat;
 }
 
 @media (max-width: 1023px) {

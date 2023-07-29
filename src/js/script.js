@@ -1,38 +1,22 @@
-// core version + navigation, pagination modules:
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
-// import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
 
 import tabs from './modules/tabs';
+import catalog from './modules/catalog';
+import testWebP from './modules/testWebPLinc';
+import swiper from './modules/swiper';
+import changesStyleRegion from './modules/map';
 
 document.addEventListener('DOMContentLoaded', function() {
-  
+
   tabs();
-  
-
-  const swiper = new Swiper('.swiper', {
-
-    modules: [Navigation, Pagination],
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
+  catalog();
+  testWebP(function (support) {
+    if (support == true) {
+      document.querySelector('body').classList.add('webp');
+    } else {
+      document.querySelector('body').classList.add('no-webp');
+    }
   });
+
 });
 
 

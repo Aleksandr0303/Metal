@@ -114,7 +114,7 @@
 
 
     }
-    .slider {
+    .swiper {
         &__img {
             min-width: 11rem;
             min-height: 11rem;
@@ -258,6 +258,16 @@
         }
 
     }
+    .swiper {
+        /*         &__name {
+                    width: 100%;
+                    height: 100%;
+                } */
+                &__img {
+                    height: 10rem;
+                    width: 100%;
+                }
+            }
 }
 
 @media (max-width: 575px) {
@@ -314,14 +324,11 @@
         }
     }
 
-    .slider {
-/*         &__name {
-            width: 100%;
-            height: 100%;
-        } */
+    .swiper {
+
         &__img {
-            height: 30rem;
-            width: 100%;
+            width: 12rem;
+            height: auto;
         }
     }
 
